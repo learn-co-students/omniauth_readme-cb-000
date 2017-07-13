@@ -1,1 +1,9 @@
-<%# Add the Facebook login link here %>
+<% if session[:user_id] %>
+  <h1>Name: <%= @user.name %></h1>
+  <h2>Email: <%= @user.email %></h2>
+  <h2>Github UID: <%= @user.uid %></h2>
+  <h2>User id:<%= @user.id %></h2>
+  <%= button_to 'Log out', logout_path, method: :delete %>
+<% else %>
+  <%= link_to 'Log in with GitHub', '/auth/github' %>
+<% end %>
