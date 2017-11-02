@@ -1,3 +1,5 @@
 *.sqlite3
 *.log
+*.env
+.env
 tmp/
