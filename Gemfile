@@ -33,6 +33,16 @@ gem 'turbolinks'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+# Use OmniAuth for 3rd party logins
+gem 'omniauth-google'
+
+# Use omniauth-facebook to use OmniAuth w/ Facebook
+gem 'omniauth-facebook'
+
+# Use DotEnv for OmniAuth credentials
+gem 'dotenv-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
