@@ -2,3 +2,5 @@
 *.log
 tmp/Gemfile.lock
 Gemfile.lock
+.env
+db/development.sqlite3
