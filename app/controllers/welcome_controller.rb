@@ -5,3 +5,4 @@ class WelcomeController < ApplicationController
     end
   end
 end
+# rails g resource User name:string email:string image:string uid:string
