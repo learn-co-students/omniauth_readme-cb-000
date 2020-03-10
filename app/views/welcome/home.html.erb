@@ -1,1 +1,13 @@
-<%# Add the Facebook login link here %>
+<% if session[:user_id] %>
+<%# it would be cool to have a "you are logged in via @provider kind of thing here" %>
+  <h1><%= @user.name %></h1>
+  <h2>Email: <%= @user.email %></h2>
+  <h2>UID: <%= @user.uid %></h2>
+  <img src="<%= @user.image %>">
+  <br>
+  <%= link_to "log out", logout_path %>
+<% else %>
+  <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+  <br>
+  <%= link_to('Log in with GitHub!', '/auth/github') %>
+<% end %>
